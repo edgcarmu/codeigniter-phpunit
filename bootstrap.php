@@ -111,7 +111,7 @@ $system_path = dirname(__DIR__, 3) . '/system';
  *
  * NO TRAILING SLASH!
  */
-$system_path = dirname(__DIR__, 3) . '/application';
+$application_folder = dirname(__DIR__, 3) . '/application';
 
 /*
  *---------------------------------------------------------------
