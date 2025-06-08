@@ -1,16 +1,17 @@
 {
-    "name": "yidas/codeigniter-phpunit",
-    "description": "CodeIgniter 3 PHPUnit Test extension library",
+    "name": "edgcarmu/codeigniter-phpunit",
+    "description": "Official adaptation of yidas/codeigniter-phpunit for CodeIgniter 3.1.11 and PHP 7.1+",
     "keywords": ["codeIgniter", "phpunit", "unit-test", "test-driven-development"],
-    "homepage": "https://github.com/yidas/codeigniter-phpunit",
+    "homepage": "https://github.com/edgcarmu/codeigniter-phpunit",
     "type": "library",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/yidas/codeigniter-phpunit/issues",
-        "source": "https://github.com/yidas/codeigniter-phpunit"
+        "issues": "https://github.com/edgcarmu/codeigniter-phpunit/issues",
+        "source": "https://github.com/edgcarmu/codeigniter-phpunit"
     },
     "minimum-stability": "stable",
     "require": {
-        "phpunit/phpunit": ">=5.5.0"
+        "php": ">=7.1",
+        "phpunit/phpunit": "^7.5"
     }
 }
