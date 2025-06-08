@@ -1,17 +1,17 @@
-<p align="center">
+<div align="center">
     <a href="https://codeigniter.com/" target="_blank">
-        <img src="https://codeigniter.com/assets/images/ci-logo-big.png" height="100px">
+        <img src="https://codeigniter.com/assets/icons/ci-logo.png" height="100px">
     </a>
     <h1 align="center">CodeIgniter PHPUnit Test</h1>
     <br>
-</p>
+</div>
 
 CodeIgniter 3 PHPUnit Test extension library
 
 [![Latest Stable Version](https://poser.pugx.org/yidas/codeigniter-phpunit/v/stable?format=flat-square)](https://packagist.org/packages/yidas/codeigniter-phpunit)
 [![License](https://poser.pugx.org/yidas/codeigniter-phpunit/license?format=flat-square)](https://packagist.org/packages/yidas/codeigniter-phpunit)
 
-This RESTful API extension is collected into [yidas/codeigniter-pack](https://github.com/yidas/codeigniter-pack) which is a complete solution for Codeigniter framework.
+Official adaptation of the [yidas/codeigniter-phpunit](https://github.com/yidas/codeigniter-phpunit) repository for compatibility with **CodeIgniter 3.1.13** and **PHP 7.1+**.
 
 FEATURES
 --------
@@ -38,8 +38,8 @@ REQUIREMENTS
 
 This library requires the following:
 
-- PHP 5.3.0+
-- CodeIgniter 3.0.0+
+- PHP 7.1.0+
+- CodeIgniter 3.1.13+
 
 ---
 
