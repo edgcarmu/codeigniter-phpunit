@@ -6,7 +6,7 @@
  *
  * This content is released under the MIT License (MIT)
  *
- * Copyright (c) 2014 - 2018, British Columbia Institute of Technology
+ * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,13 +26,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * @package    CodeIgniter
- * @author    EllisLab Dev Team
- * @copyright    Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
- * @copyright    Copyright (c) 2014 - 2018, British Columbia Institute of Technology (http://bcit.ca/)
- * @license    http://opensource.org/licenses/MIT	MIT License
- * @link    https://codeigniter.com
- * @since    Version 1.0.0
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+ * @license	https://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
  * @filesource
  */
 
@@ -107,7 +107,7 @@ $system_path = dirname(__DIR__, 3) . '/system';
  * use an absolute (full) server path.
  * For more info please see the user guide:
  *
- * https://codeigniter.com/user_guide/general/managing_apps.html
+ * https://codeigniter.com/userguide3/general/managing_apps.html
  *
  * NO TRAILING SLASH!
  */
@@ -176,6 +176,7 @@ $view_folder = '';
 // $assign_to_config['name_of_config_item'] = 'value of config item';
 
 
+
 // --------------------------------------------------------------------
 // END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
 // --------------------------------------------------------------------
@@ -221,7 +222,7 @@ define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 define('BASEPATH', $system_path);
 
 // Path to the front controller (this file) directory
-define('FCPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
+define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
 // Name of the "system" directory
 define('SYSDIR', basename(BASEPATH));
@@ -249,7 +250,7 @@ if (is_dir($application_folder)) {
     exit(3); // EXIT_CONFIG
 }
 
-define('APPPATH', $application_folder . DIRECTORY_SEPARATOR);
+define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
 
 // The path to the "views" directory
 if (!isset($view_folder[0]) && is_dir(APPPATH . 'views' . DIRECTORY_SEPARATOR)) {
@@ -276,7 +277,7 @@ if (!isset($view_folder[0]) && is_dir(APPPATH . 'views' . DIRECTORY_SEPARATOR)) 
     exit(3); // EXIT_CONFIG
 }
 
-define('VIEWPATH', $view_folder . DIRECTORY_SEPARATOR);
+define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
 
 /*
  * --------------------------------------------------------------------
