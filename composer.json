@@ -11,7 +11,6 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "php": ">=7.1",
-        "phpunit/phpunit": "^7.5"
+        "phpunit/phpunit": ">=5.5.0"
     }
 }

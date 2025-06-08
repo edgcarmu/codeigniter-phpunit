@@ -8,8 +8,8 @@
 
 CodeIgniter 3 PHPUnit Test extension library
 
-[![Latest Stable Version](https://poser.pugx.org/yidas/codeigniter-phpunit/v/stable?format=flat-square)](https://packagist.org/packages/yidas/codeigniter-phpunit)
-[![License](https://poser.pugx.org/yidas/codeigniter-phpunit/license?format=flat-square)](https://packagist.org/packages/yidas/codeigniter-phpunit)
+[![Latest Stable Version](https://poser.pugx.org/edgcarmu/codeigniter-phpunit/v/stable?format=flat-square)](https://packagist.org/packages/edgcarmu/codeigniter-phpunit)
+[![License](https://poser.pugx.org/edgcarmu/codeigniter-phpunit/license?format=flat-square)](https://packagist.org/packages/edgcarmu/codeigniter-phpunit)
 
 Official adaptation of the [yidas/codeigniter-phpunit](https://github.com/yidas/codeigniter-phpunit) repository for compatibility with **CodeIgniter 3.1.13** and **PHP 7.1+**.
 
@@ -46,9 +46,9 @@ This library requires the following:
 INSTALLATION
 ------------
 
-Run Composer in your Codeigniter project under the folder `\application`:
+Run Composer from the project root:
 
-    composer require yidas/codeigniter-phpunit
+    composer require edgcarmu/codeigniter-phpunit
 
 ---
 
@@ -57,10 +57,13 @@ DIRECTORY STRUCTURE
 
 ```
 codeigniter/
-└── application/
-    ├── tests/          Test cases
-    ├── vendor/         Vendor included yidas/codeigniter-phpunit
-    └── phpunit.xml     PHPUnit XML
+├── application/
+├── system/
+├── tests/
+│   ├── bootstrap.php        ← Initializes the test environment; create only if needed to customize, then delegate to vendor/edgcarmu/codeigniter-phpunit/bootstrap.php
+│   └── MyTest.php           ← Your test cases go here
+├── vendor/
+└── phpunit.xml              ← PHPUnit configuration; can point directly to the library's bootstrap if no customization is needed
 ```
 
 ---
@@ -68,11 +71,11 @@ codeigniter/
 CONFIGURATION
 -------------
 
-According to [Directory Structure](#directory-structure), create and configure `phpunit.xml` under `application` directory:
+According to [Directory Structure](#directory-structure), create and configure `phpunit.xml` in the project root:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
-<phpunit bootstrap="vendor/yidas/codeigniter-phpunit/bootstrap.php">
+<phpunit bootstrap="vendor/edgcarmu/codeigniter-phpunit/bootstrap.php">
   <testsuites>
     <testsuite name="TestSuite">
       <directory>tests</directory>
@@ -81,24 +84,25 @@ According to [Directory Structure](#directory-structure), create and configure `
 </phpunit>
 ```
 
-For this `phpunit.xml` template, the test cases directory is `application/test`, make sure you would create every test cases under it.
+For this phpunit.xml template, the test cases directory is tests/, located at the project root.
+Make sure to place all your test cases inside this directory.
 
 ---
 
 USAGE
 -----
 
-In the `application` directory of this library, run `phpunit` from vendor:
+From the project root, run PHPUnit using the Composer-installed binary:
 
 ```
-$ ./vendor/bin/phpunit
+./vendor/bin/phpunit
 ```
 
 Or using absolute path commands like:
 
 ```
-$ /var/www/html/codeigniter3/application/vendor/bin/phpunit -c /var/www/html/codeigniter3/application/phpunit.xml
-$ phpunit -c /var/www/html/codeigniter3/application/phpunit.xml
+$ /var/www/html/codeigniter3/vendor/bin/phpunit -c /var/www/html/codeigniter3/phpunit.xml
+$ phpunit -c /var/www/html/codeigniter3/phpunit.xml
 ```
 
 Then the result would like:
@@ -118,10 +122,9 @@ No tests executed!
 TEST CASE
 ---------
 
-With this extension libaray, you could write test cases with loading Codeigniter framework.
+With this extension library, you can write test cases while loading the CodeIgniter framework.
 
-For example, write a test case `application/tests/CodeigniterTest.php` for testing Codeigniter config component:
-
+For example, create a test case at tests/CodeigniterTest.php to test a CodeIgniter component like the config loader:
 ```php
 <?php
 
